@@ -27,7 +27,7 @@ body::before {
     right: 0;
     width: 100%;
     max-height: 80px;
-    background: url(/resources/background-small.png) no-repeat;
+    background: url(resources/background-small.png) no-repeat;
 }
 .main-content {
     margin: 0 20px;
