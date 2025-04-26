@@ -16,6 +16,7 @@
 
 body {
     position: relative;
+    height: 100vh;
 }
 
 body::before {
@@ -30,7 +31,7 @@ body::before {
     background: url(resources/background-small.png) no-repeat;
 }
 .main-content {
-    margin: 0 20px;
+    margin: 0 20px 0 40px;;
     display: grid;
     border-left: 1px dashed var(--light-purple-color);
     padding: 80px 20px;
