@@ -52,7 +52,7 @@ body::before {
     font-size: 2rem;
     letter-spacing: -1px;
     font-weight: 800;
-    margin: 30px 0 50px;
+    margin: 30px 0 40px;
 }
 
 .subheadline {
@@ -64,6 +64,7 @@ body::before {
 
 p {
     font-size: 1.25rem;
+    font-weight: 400;
 }
 
 .article > * {
@@ -77,7 +78,7 @@ p {
 
 .article-headline {
     color: var(--dark-color);
-    font-weight: 600;
+    font-weight: 800;
     position: relative;
 }
 
