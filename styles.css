@@ -1,0 +1,94 @@
+:root {
+    font-family: 'Red Hat Display', sans-serif;
+    --purple-color: #6B59D0;
+    --light-purple-color: #DEDDEB;
+    --white-color: #FFFFFF;
+    --dark-color: #374151;
+    --light-grey-color: #6B7280;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body {
+    position: relative;
+}
+
+body::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    max-height: 80px;
+    background: url(/resources/background-small.png) no-repeat;
+}
+.main-content {
+    margin: 0 20px;
+    display: grid;
+    border-left: 1px dashed var(--light-purple-color);
+    padding: 50px 20px;
+}
+
+.overlay {
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.headline {
+    color: var(--dark-color);
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+    font-weight: 800;
+    margin: 16px 0;
+}
+
+.subheadline {
+    color: var(--purple-color);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-top: 12px;
+}
+
+.article > * {
+    margin-bottom: 10px;
+}
+
+.article-img {
+    width: 52px;
+}
+
+.article-headline {
+    color: var(--dark-color);
+    font-weight: 600;
+    position: relative;
+}
+
+.article-headline::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -21.5px;
+    bottom: 0;
+    border: 1px solid var(--purple-color);
+}
+
+.article-subheadline {
+    color: var(--light-grey-color)
+}
+
+.purple {
+    color: var(--purple-color)
+}
+
+
