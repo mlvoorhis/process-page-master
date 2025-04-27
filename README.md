@@ -37,17 +37,36 @@
 ## Overview
 
 ![screenshot](./thumbnail.jpg)
+In this project, I created a responsive process page using HTML and CSS. The goal was to work with different breakpoints to ensure the page adapted to various screen sizes. I used the <code>::before</code> pseudo-element to add content before section headings, and incorporated dashed gray lines and purple markers for visual emphasis.
 
-<!--
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
-- What have you learned/improved?
-- Your wisdom? :)
--->
 
 ### What I learned
+This project came fairly easy to me! My biggest challenge was aligning the dashed gray lines and making them responsive.
 
-<!-- Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge. -->
+Initially, I tried applying the dashed lines to .main-content, thinking I needed the content to span the entire screen with padding instead of margins. This approach turned out to be ineffective and complicated the layout. The lines became harder to manage, and I was struggling with consistency.
+
+Then, I realized the solution was right in front of me: I could use the ::before pseudo-elements, positioned relative to their respective elements. This made the lines consistent and tied them directly to their containers. To ensure the lines covered the full height, I used a large negative value, though I wonder if there’s a cleaner alternative to avoid using negative margins.
+
+Here’s the updated code snippet:
+```css
+.four {
+  position: relative;
+}
+
+.four::before {
+    content: "";
+    position: absolute;
+    left: -21.5px;
+    top: -99999px;
+    bottom: 0;
+    width: 1px;
+    border-right: 1px dashed var(--light-purple-color);
+    position: absolute;
+    z-index: -1;
+}
+```
+I made the purple markers similarly:
 ```css
 .article-headline::before {
     position: absolute;
@@ -59,11 +78,8 @@ Introduce your projects by taking a screenshot or a gif. Try to tell visitors a 
 }
 ```
 ### Useful resources
-
-<!--
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
--->
+- [FreeCodeCamp](https://www.freecodecamp.org) - My HTML & CSS foundation.
+- [DevChallenges](https://devchallenges.io) - Source of this challenge and great practice for aspiring web developers.
 
 ### Built with
 - Semantic HTML5 markup
